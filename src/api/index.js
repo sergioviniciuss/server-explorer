@@ -2,11 +2,14 @@ import axios from "axios";
 import { ENDPOINTS } from "../constants";
 
 export const getAuthToken = async ({ username, password }) => {
-  const { token } = await axios
-    .post(ENDPOINTS.authorization, {
+  try {
+    const response = await axios.post(ENDPOINTS.authorization, {
       username,
       password,
-    })
-    .catch((error) => console.error(error));
-  return token;
+    });
+    return response?.data?.token;
+  } catch (error) {
+    const errorMessage = error?.response?.data?.error_message;
+    throw new Error(errorMessage || `Unexpected error.\n${error}`);
+  }
 };
