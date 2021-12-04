@@ -1,6 +1,13 @@
 {
   "presets": [
-    "@babel/preset-env",
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "esmodules": true // reference: https://github.com/babel/babel/issues/9849
+        }
+      }
+    ],
     "@babel/preset-react"
   ]
 }
