@@ -1,32 +1,14 @@
 const path = require("path");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const loaders = require('./loaders');
+
 
 module.exports = {
   entry: path.resolve(__dirname, '..', './src/index.js'),
   module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: ["babel-loader"],
-      },
-      {
-        test: /\.(scss|css)$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
-      },
-      {
-        test: /\.(png|gif|jp(e*)g|svg)$/,
-        use: [
-          {
-            loader: "url-loader",
-            options: {
-              limit: 8192,
-            },
-          },
-        ],
-      },
-    ],
+    rules: loaders,
   },
   resolve: {
     extensions: ["*", ".js", ".jsx"],
@@ -36,6 +18,7 @@ module.exports = {
     filename: "bundle.js",
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Server Explorer',
