@@ -1,6 +1,6 @@
 import React from "react";
-import Login from "./pages/Login";
-import Servers from "./pages/Servers";
+import { Login } from "./pages/Login";
+import { Servers } from "./pages/Servers";
 
 export const ROUTES = {
   LOGIN: '/login',

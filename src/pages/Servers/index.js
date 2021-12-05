@@ -7,7 +7,7 @@ import styles from "./styles.scss";
 import { getServersList } from "../../api";
 import { ROUTES } from "../../routes";
 
-const Servers = () => {
+export const Servers = () => {
   const history = useHistory();
   const [serversList, setServersList] = useState([]);
 
@@ -58,5 +58,3 @@ const Servers = () => {
     </div>
   );
 };
-
-export default Servers;
