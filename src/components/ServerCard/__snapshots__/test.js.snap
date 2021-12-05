@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ServerCard renders ServerCard component with name and distance 1`] = `
+<div
+  class="wrapper"
+>
+  <div
+    class="container"
+  >
+    <img
+      class="image"
+      src="/file"
+    />
+    <div
+      class="info"
+    >
+      <div
+        class="name"
+      >
+        Germany #01
+      </div>
+      <div
+        class="distance"
+      >
+        123
+      </div>
+    </div>
+  </div>
+</div>
+`;
