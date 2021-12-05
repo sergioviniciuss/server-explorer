@@ -9,10 +9,12 @@ export const LoginForm = () => {
   const username = useFormInput();
   const password = useFormInput();
   const history = useHistory();
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
   const handleLogin = async () => {
     try {
+      setIsLoading(true);
       await getAuthToken({
         username: username.value,
         password: password.value,
@@ -25,6 +27,7 @@ export const LoginForm = () => {
 
       setError(msg);
     }
+    setIsLoading(false);
   };
 
   return (
@@ -45,8 +48,8 @@ export const LoginForm = () => {
           {...password}
           autoComplete="new-password"
         />
-        <button className={styles.cta} type="submit">
-          Submit
+        <button className={styles.cta} type="submit" disabled={isLoading}>
+          {isLoading ? "Loading..." : "Login"}
         </button>
       </form>
     </div>
