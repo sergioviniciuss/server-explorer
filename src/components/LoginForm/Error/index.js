@@ -5,6 +5,7 @@ export const Error = ({ error }) => {
   return (
     <>
       <span className={styles.error}>{error}</span>
+      <br />
     </>
   );
 };

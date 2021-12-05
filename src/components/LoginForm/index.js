@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import styles from "./styles.scss";
 import { getAuthToken } from "../../api";
+import { Error } from "./Error";
 import { ROUTES } from "../../routes";
 
 export const LoginForm = () => {
   const username = useFormInput();
   const password = useFormInput();
   const history = useHistory();
+  const [error, setError] = useState(null);
 
   const handleLogin = async () => {
     try {
@@ -18,13 +20,17 @@ export const LoginForm = () => {
 
       history.push(ROUTES.SERVERS);
     } catch (error) {
-      console.error(error);
+      console.error(error?.message);
+      const msg = error?.message || "An error ocurred. Please try again...";
+
+      setError(msg);
     }
   };
 
   return (
     <div className={styles.wrapper}>
       <form className={styles.container} onSubmit={handleLogin}>
+        {error && <Error error={error} />}
         <input
           className={styles.textField}
           type="text"
