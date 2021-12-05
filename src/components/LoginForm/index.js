@@ -24,20 +24,24 @@ export const LoginForm = () => {
 
   return (
     <div className={styles.wrapper}>
-      <form onSubmit={handleLogin}>
+      <form className={styles.container} onSubmit={handleLogin}>
         <input
+          className={styles.textField}
           type="text"
           placeholder="username"
           {...username}
           autoComplete="new-password"
         />
         <input
+          className={styles.textField}
           type="password"
           placeholder="password"
           {...password}
           autoComplete="new-password"
         />
-        <button type="submit">Submit</button>
+        <button className={styles.cta} type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );

@@ -1,3 +1,47 @@
 .wrapper {
   display: block;
-};
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.textField {
+  width: 320px;
+  height: 50px;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+
+  &::placeholder {
+    text-align: center;
+    text-transform: capitalize;
+  }
+}
+
+.cta {
+  background-color: #4687ff;
+  color: #fff;
+  width: 320px;
+  height: 50px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid transparent;
+  white-space: nowrap;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+
+  &:hover,
+  &.focus {
+    background-color: #77a7ff;
+    text-decoration: none;
+  }
+}
