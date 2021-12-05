@@ -1,16 +1,26 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import styles from "./styles.scss";
 import { getAuthToken } from "../../api";
+import { ROUTES } from "../../routes";
 
 export const LoginForm = () => {
   const username = useFormInput();
   const password = useFormInput();
+  const history = useHistory();
 
   const handleLogin = async () => {
-    const token = await getAuthToken({
-      username: username.value,
-      password: password.value,
-    });
+    try {
+      const token = await getAuthToken({
+        username: username.value,
+        password: password.value,
+      });
+
+      sessionStorage.setItem("token", token);
+      history.push(ROUTES.SERVERS);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
