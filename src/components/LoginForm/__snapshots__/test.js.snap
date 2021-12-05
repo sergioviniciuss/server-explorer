@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm renders component properly 1`] = `
+<div
+  class="wrapper"
+>
+  <form
+    class="container"
+  >
+    <input
+      autocomplete="new-password"
+      class="textField"
+      placeholder="username"
+      type="text"
+      value=""
+    />
+    <input
+      autocomplete="new-password"
+      class="textField"
+      placeholder="password"
+      type="password"
+      value=""
+    />
+    <button
+      class="cta"
+      type="submit"
+    >
+      Login
+    </button>
+  </form>
+</div>
+`;
