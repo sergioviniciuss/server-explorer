@@ -1,0 +1,29 @@
+.wrapper {
+  display: block;
+  color: #92959a;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: flex-start;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  display: block;
+  margin-right: 24px;
+}
+
+.name {
+  width: 160px;
+}
+
+.distance {
+  float: right;
+}
