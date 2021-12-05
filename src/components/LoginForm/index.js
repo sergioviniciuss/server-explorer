@@ -11,12 +11,11 @@ export const LoginForm = () => {
 
   const handleLogin = async () => {
     try {
-      const token = await getAuthToken({
+      await getAuthToken({
         username: username.value,
         password: password.value,
       });
 
-      sessionStorage.setItem("token", token);
       history.push(ROUTES.SERVERS);
     } catch (error) {
       console.error(error);
