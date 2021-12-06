@@ -23,7 +23,7 @@ TailwindCSS etc. are fine. -> I introduced only libs for tooling (webpack, jest,
 - macOS Big Sur version 11.6.1 (20G224)
 
 ## How to setup
-- clone the repo: git clone https://github.com/sergioviniciuss/server-explorer.git
+- clone the repo: `git clone https://github.com/sergioviniciuss/server-explorer.git`
 - navigate to the root of the repo and run `yarn`to install the dependencies
 - Choose one of the commands from the list below according to what you want to run.
 
