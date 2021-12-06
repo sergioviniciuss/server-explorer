@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ServerCard renders ServerCard component with name and distance 1`] = `
+exports[`ServerCard renders with name and distance 1`] = `
 <div
   class="wrapper"
 >
