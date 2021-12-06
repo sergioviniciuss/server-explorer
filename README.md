@@ -1,4 +1,4 @@
-# SERVER'S EXPLORER APP
+# SERVERS EXPLORER APP
 
 Requirements:
 - [x] Implement login
