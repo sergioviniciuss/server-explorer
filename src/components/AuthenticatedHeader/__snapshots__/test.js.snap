@@ -11,7 +11,12 @@ exports[`AuthenticatedHeader renders the component properly 1`] = `
   <span
     class="greetings"
   >
-    Hello there!
+    Hello there! 
+    <a
+      class="link"
+    >
+      (logout)
+    </a>
   </span>
 </div>
 `;
