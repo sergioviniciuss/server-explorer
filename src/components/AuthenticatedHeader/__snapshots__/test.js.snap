@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthenticatedHeader renders the component properly 1`] = `
+<div
+  class="headerContainer"
+>
+  <img
+    class="logo"
+    src="/file"
+  />
+  <span
+    class="greetings"
+  >
+    Hello there!
+  </span>
+</div>
+`;
