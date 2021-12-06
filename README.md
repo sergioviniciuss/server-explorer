@@ -31,7 +31,3 @@ TailwindCSS etc. are fine. -> I introduced only libs for tooling (webpack, jest,
 ## Commit Message Conventions
 
 [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
-
-## screenshots:
-
-![foo](/https://i.ibb.co/16sYwXv/Screenshot-2021-12-06-at-03-00-09.png?raw=true "Login")
