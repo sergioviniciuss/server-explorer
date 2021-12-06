@@ -1,19 +1,12 @@
 .container {
-  background-color: #161922;
-  color: white;
+  background-color: #fff;
+  color: #161922;
   display: block;
   text-align: center;
   margin: 0 auto;
-  max-width: 400px;
+  max-width: 1200px;
   min-height: 600px;
-}
-
-.logo {
-  margin-top: 50px;
-}
-
-.row {
-  width: auto;
+  padding: 10px;
 }
 
 .filters {

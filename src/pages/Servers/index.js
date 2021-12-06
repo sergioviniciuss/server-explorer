@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { useHistory } from "react-router-dom";
 import lodashOrderBy from "lodash/orderBy";
-import nordVPNLogo from "../../images/nordaccount-light.svg";
 import { ServerCard } from "../../components/ServerCard";
+import { AuthenticatedHeader } from "../../components/AuthenticatedHeader";
 import styles from "./styles.scss";
 import { getServersList } from "../../api";
 import { ROUTES } from "../../routes";
@@ -11,20 +11,14 @@ export const Servers = () => {
   const history = useHistory();
   const [serversList, setServersList] = useState([]);
 
-  const sortByName = useCallback(
-    (e) => {
+  const sortBy = useCallback(
+    (value) => (e) => {
       e.preventDefault();
-      const sortedList = lodashOrderBy(serversList, ["name"], ["asc"]);
+      const sortedList = lodashOrderBy(serversList, [value], ["asc"]);
       setServersList(sortedList);
     },
     [serversList]
   );
-
-  const sortByDistance = (e) => {
-    e.preventDefault();
-    const sortedList = lodashOrderBy(serversList, ["distance"], ["asc"]);
-    setServersList(sortedList);
-  };
 
   const getData = async () => {
     try {
@@ -49,10 +43,10 @@ export const Servers = () => {
 
   return (
     <div className={styles.container}>
-      <img className={styles.logo} src={nordVPNLogo} />
+      <AuthenticatedHeader />
       <div className={styles.filters}>
-        <button onClick={sortByName}>sort by name</button>
-        <button onClick={sortByDistance}>sort by distance</button>
+        <button onClick={sortBy("name")}>sort by name</button>
+        <button onClick={sortBy("distance")}>sort by distance</button>
       </div>
       {renderList()}
     </div>
