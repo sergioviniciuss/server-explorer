@@ -4,9 +4,11 @@ import { Link } from ".";
 
 describe("Link", () => {
   it("renders it with a text", () => {
-    render(<Link href="my-link" text="anything" />);
+    render(<Link href="/my-link" text="anything" />);
 
-    expect(screen.getByText(/anything/i)).toBeInTheDocument();
+    const children = screen.getByText(/anything/i)
+
+    expect(children).toBeInTheDocument()
     expect(children).toHaveAttribute('href', '/my-link')
   });
 });
