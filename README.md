@@ -34,4 +34,4 @@ TailwindCSS etc. are fine. -> I introduced only libs for tooling (webpack, jest,
 
 ## screenshots:
 
-![foo](/https://ibb.co/WtDNYzx "Login")
+![foo](/https://i.ibb.co/16sYwXv/Screenshot-2021-12-06-at-03-00-09.png?raw=true "Login")
